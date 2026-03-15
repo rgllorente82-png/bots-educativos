@@ -1,1 +1,562 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prepara tus Pruebas Libres de la ESO y Acceso a Grado Medio en Andalucía - Bots de Telegram Gratuitos</title>
+    <meta name="description" content="Bots de Telegram gratuitos para preparar las Pruebas Libres de la ESO y las Pruebas de Acceso a Grado Medio en Andalucía. Preguntas tipo test con explicaciones, estadísticas y ranking.">
+    <meta name="keywords" content="pruebas libres ESO Andalucía, acceso grado medio Andalucía, test ESO gratis, preparar ESO adultos, examen acceso grado medio, bot Telegram educación, pruebas libres graduado ESO">
+    <meta name="author" content="Roberto">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://tuusuario.github.io/bots-educativos/">
 
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:title" content="Prepara tus Pruebas Libres ESO y Acceso a Grado Medio - Gratis">
+    <meta property="og:description" content="Bots de Telegram gratuitos con preguntas tipo test, explicaciones detalladas, estadísticas y ranking para preparar tus exámenes en Andalucía.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tuusuario.github.io/bots-educativos/">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Prepara tus Pruebas Libres ESO y Acceso a Grado Medio - Gratis">
+    <meta name="twitter:description" content="Bots de Telegram gratuitos para preparar exámenes en Andalucía. Preguntas tipo test con explicaciones.">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Bots Educativos Andalucía",
+        "description": "Bots de Telegram gratuitos para preparar las Pruebas Libres de la ESO y Acceso a Grado Medio en Andalucía",
+        "url": "https://tuusuario.github.io/bots-educativos/"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Bot Pruebas Libres ESO Andalucía",
+        "operatingSystem": "Telegram",
+        "applicationCategory": "EducationalApplication",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+        "description": "Bot de Telegram para preparar las Pruebas Libres de la ESO en Andalucía con preguntas tipo test y explicaciones."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Bot Acceso Grado Medio Andalucía",
+        "operatingSystem": "Telegram",
+        "applicationCategory": "EducationalApplication",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+        "description": "Bot de Telegram para preparar las Pruebas de Acceso a Grado Medio en Andalucía con preguntas tipo test y explicaciones."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Qué son las Pruebas Libres de la ESO en Andalucía?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Son exámenes oficiales que permiten obtener el título de Graduado en Educación Secundaria Obligatoria sin necesidad de cursar los estudios de forma presencial. Están destinadas a mayores de 18 años residentes en Andalucía."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cómo funcionan los bots de Telegram?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Simplemente abre Telegram, busca el bot y pulsa Iniciar. Te presentará preguntas tipo test organizadas por asignaturas. Cada pregunta incluye una explicación detallada de la respuesta correcta. Además, llevarás un registro de tu progreso con estadísticas y ranking."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Los bots son gratuitos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, ambos bots son completamente gratuitos. No hay pagos ocultos, suscripciones ni publicidad."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --azul: #0088cc;
+            --azul-oscuro: #006699;
+            --verde: #2ecc71;
+            --verde-oscuro: #27ae60;
+            --gris-fondo: #f5f7fa;
+            --gris-texto: #555;
+            --oscuro: #2c3e50;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--azul) 0%, var(--azul-oscuro) 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px 60px;
+        }
+
+        .hero-emoji { font-size: 64px; margin-bottom: 20px; }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.92;
+            max-width: 650px;
+            margin: 0 auto 36px;
+        }
+
+        .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
+
+        .btn-eso {
+            background: white;
+            color: var(--azul);
+        }
+
+        .btn-gm {
+            background: var(--verde);
+            color: white;
+        }
+
+        .btn svg { width: 22px; height: 22px; }
+
+        /* FEATURES */
+        .features {
+            padding: 70px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 1.9rem;
+            color: var(--oscuro);
+            margin-bottom: 50px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 36px;
+        }
+
+        .feature-card {
+            padding: 30px 24px;
+            border-radius: 16px;
+            background: var(--gris-fondo);
+            transition: transform 0.2s;
+        }
+
+        .feature-card:hover { transform: translateY(-4px); }
+        .feature-icon { font-size: 42px; margin-bottom: 16px; }
+        .feature-card h3 { font-size: 1.15rem; color: var(--oscuro); margin-bottom: 10px; }
+        .feature-card p { color: var(--gris-texto); font-size: 0.95rem; }
+
+        /* BOTS SECTION */
+        .bots {
+            background: var(--gris-fondo);
+            padding: 70px 20px;
+        }
+
+        .bots h2 {
+            text-align: center;
+            font-size: 1.9rem;
+            color: var(--oscuro);
+            margin-bottom: 50px;
+        }
+
+        .bots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .bot-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: transform 0.2s;
+        }
+
+        .bot-card:hover { transform: translateY(-4px); }
+        .bot-card .bot-emoji { font-size: 50px; margin-bottom: 16px; }
+        .bot-card h3 { font-size: 1.3rem; color: var(--oscuro); margin-bottom: 10px; }
+        .bot-card p { color: var(--gris-texto); margin-bottom: 8px; font-size: 0.95rem; }
+
+        .bot-card ul {
+            list-style: none;
+            text-align: left;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+        .bot-card ul li {
+            padding: 6px 0;
+            color: var(--gris-texto);
+            font-size: 0.93rem;
+        }
+
+        .bot-card ul li::before {
+            content: "✓ ";
+            color: var(--verde);
+            font-weight: bold;
+        }
+
+        .bot-card .btn {
+            margin-top: 10px;
+            padding: 14px 28px;
+            font-size: 1rem;
+        }
+
+        .bot-eso { border-top: 4px solid var(--azul); }
+        .bot-gm { border-top: 4px solid var(--verde); }
+
+        /* HOW IT WORKS */
+        .como-funciona {
+            padding: 70px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .como-funciona h2 {
+            font-size: 1.9rem;
+            color: var(--oscuro);
+            margin-bottom: 50px;
+        }
+
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            text-align: left;
+            padding: 24px;
+            border-radius: 16px;
+            background: var(--gris-fondo);
+        }
+
+        .step-num {
+            flex-shrink: 0;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--azul);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .step h3 { color: var(--oscuro); margin-bottom: 4px; }
+        .step p { color: var(--gris-texto); font-size: 0.95rem; }
+
+        /* FAQ */
+        .faq {
+            background: var(--gris-fondo);
+            padding: 70px 20px;
+        }
+
+        .faq h2 {
+            text-align: center;
+            font-size: 1.9rem;
+            color: var(--oscuro);
+            margin-bottom: 50px;
+        }
+
+        .faq-list {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 14px;
+            overflow: hidden;
+        }
+
+        .faq-item summary {
+            padding: 20px 24px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--oscuro);
+            font-size: 1.02rem;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 1.4rem; color: var(--azul); }
+        .faq-item[open] summary::after { content: "−"; }
+
+        .faq-item .faq-answer {
+            padding: 0 24px 20px;
+            color: var(--gris-texto);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* CTA FINAL */
+        .cta {
+            background: linear-gradient(135deg, var(--verde) 0%, var(--verde-oscuro) 100%);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .cta h2 { font-size: 1.9rem; margin-bottom: 16px; }
+        .cta p { font-size: 1.1rem; opacity: 0.92; margin-bottom: 36px; max-width: 550px; margin-left: auto; margin-right: auto; }
+
+        .cta .btn {
+            background: white;
+            color: var(--verde-oscuro);
+            padding: 16px 36px;
+            font-size: 1.1rem;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--oscuro);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+        }
+
+        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            .hero { padding: 50px 16px 40px; }
+            .hero h1 { font-size: 1.6rem; }
+            .hero p { font-size: 1rem; }
+            .btn { padding: 14px 24px; font-size: 0.95rem; }
+            .features h2, .bots h2, .como-funciona h2, .faq h2, .cta h2 { font-size: 1.5rem; }
+            .step { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-emoji">📚</div>
+        <h1>Prepara tus exámenes en Andalucía con Telegram</h1>
+        <p>Bots gratuitos con preguntas tipo test, explicaciones detalladas, estadísticas de progreso y ranking para preparar las Pruebas Libres de la ESO y el Acceso a Grado Medio.</p>
+        <div class="hero-buttons">
+            <a href="https://t.me/PruebasLibresESO_bot" class="btn btn-eso" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.95 7.47l-2.05 9.64c-.15.68-.58.85-1.17.53l-3.24-2.39-1.56 1.5c-.17.17-.32.32-.65.32l.23-3.28 5.97-5.39c.26-.23-.06-.36-.4-.14L8.08 13.3l-3.13-.98c-.68-.21-.69-.68.14-.99l12.23-4.71c.57-.21 1.07.14.88.99l-.25-.14z"/></svg>
+                Pruebas Libres ESO
+            </a>
+            <a href="https://t.me/AccesoGradoMedioAndalucia_bot" class="btn btn-gm" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.95 7.47l-2.05 9.64c-.15.68-.58.85-1.17.53l-3.24-2.39-1.56 1.5c-.17.17-.32.32-.65.32l.23-3.28 5.97-5.39c.26-.23-.06-.36-.4-.14L8.08 13.3l-3.13-.98c-.68-.21-.69-.68.14-.99l12.23-4.71c.57-.21 1.07.14.88.99l-.25-.14z"/></svg>
+                Acceso Grado Medio
+            </a>
+        </div>
+    </header>
+
+    <!-- FEATURES -->
+    <section class="features">
+        <h2>¿Por qué usar nuestros bots?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Preguntas tipo test</h3>
+                <p>Cientos de preguntas organizadas por asignaturas, con cuatro opciones de respuesta como en el examen real.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💡</div>
+                <h3>Explicaciones detalladas</h3>
+                <p>Cada pregunta incluye una explicación completa de la respuesta correcta para que entiendas el porqué.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Estadísticas de progreso</h3>
+                <p>Lleva un seguimiento de tus aciertos, errores y progreso en cada asignatura para saber dónde mejorar.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏆</div>
+                <h3>Ranking y puntuación</h3>
+                <p>Compite con otros estudiantes, acumula puntos y sube en el ranking mientras aprendes.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Estudia desde el móvil</h3>
+                <p>Accede desde Telegram en cualquier momento y lugar. Sin descargas, sin registros complicados.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🆓</div>
+                <h3>Totalmente gratuito</h3>
+                <p>Sin pagos, sin suscripciones, sin publicidad. Creados para ayudar a quien lo necesite.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTS -->
+    <section class="bots">
+        <h2>Nuestros bots</h2>
+        <div class="bots-grid">
+            <article class="bot-card bot-eso">
+                <div class="bot-emoji">🎓</div>
+                <h3>Pruebas Libres de la ESO</h3>
+                <p>Prepara el examen para obtener el Graduado en ESO en Andalucía.</p>
+                <ul>
+                    <li>Lengua Castellana y Literatura</li>
+                    <li>Matemáticas</li>
+                    <li>Ciencias Sociales</li>
+                    <li>Ciencias Naturales</li>
+                    <li>Inglés</li>
+                </ul>
+                <a href="https://t.me/PruebasLibresESO_bot" class="btn btn-eso" target="_blank" rel="noopener">Abrir en Telegram</a>
+            </article>
+            <article class="bot-card bot-gm">
+                <div class="bot-emoji">🔧</div>
+                <h3>Acceso a Grado Medio</h3>
+                <p>Prepara las Pruebas de Acceso a Ciclos Formativos de Grado Medio en Andalucía.</p>
+                <ul>
+                    <li>Competencia Comunicativa</li>
+                    <li>Competencia Matemática</li>
+                    <li>Competencia Digital</li>
+                </ul>
+                <a href="https://t.me/AccesoGradoMedioAndalucia_bot" class="btn btn-gm" target="_blank" rel="noopener">Abrir en Telegram</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="como-funciona">
+        <h2>¿Cómo funciona?</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <div>
+                    <h3>Abre Telegram</h3>
+                    <p>Si no tienes Telegram, descárgalo gratis desde la App Store o Google Play.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <div>
+                    <h3>Busca el bot</h3>
+                    <p>Busca <strong>@PruebasLibresESO_bot</strong> o <strong>@AccesoGradoMedioAndalucia_bot</strong> en Telegram, o pulsa los botones de esta página.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <div>
+                    <h3>Pulsa "Iniciar"</h3>
+                    <p>Elige la asignatura que quieras practicar y empieza a responder preguntas tipo test.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">4</div>
+                <div>
+                    <h3>Aprende y mejora</h3>
+                    <p>Lee las explicaciones, revisa tus estadísticas y sigue practicando hasta dominar cada tema.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <h2>Preguntas frecuentes</h2>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>¿Qué son las Pruebas Libres de la ESO en Andalucía?</summary>
+                <div class="faq-answer">Son exámenes oficiales convocados por la Junta de Andalucía que permiten obtener el título de Graduado en Educación Secundaria Obligatoria sin necesidad de cursar los estudios de forma presencial. Están destinadas a personas mayores de 18 años que no poseen dicha titulación. Se convocan habitualmente una o dos veces al año.</div>
+            </details>
+            <details class="faq-item">
+                <summary>¿Qué son las Pruebas de Acceso a Grado Medio?</summary>
+                <div class="faq-answer">Son exámenes que permiten acceder a los Ciclos Formativos de Grado Medio de Formación Profesional sin tener el título de ESO. Se dividen en tres competencias: Comunicativa (lengua), Matemática y Digital. Están destinadas a personas de al menos 17 años cumplidos en el año de la prueba.</div>
+            </details>
+            <details class="faq-item">
+                <summary>¿Los bots son realmente gratuitos?</summary>
+                <div class="faq-answer">Sí, ambos bots son completamente gratuitos. No hay pagos ocultos, suscripciones premium ni publicidad. Han sido creados con el objetivo de ayudar a todas las personas que necesiten preparar estos exámenes.</div>
+            </details>
+            <details class="faq-item">
+                <summary>¿Necesito instalar algo?</summary>
+                <div class="faq-answer">Solo necesitas tener Telegram instalado en tu móvil, tablet u ordenador. Telegram es gratuito y está disponible para Android, iOS, Windows, Mac y Linux. También puedes usarlo desde el navegador en web.telegram.org.</div>
+            </details>
+            <details class="faq-item">
+                <summary>¿Las preguntas están actualizadas?</summary>
+                <div class="faq-answer">Sí, las preguntas se basan en el temario oficial vigente en Andalucía. Se revisan y actualizan periódicamente para asegurar que reflejen los contenidos que entran en los exámenes.</div>
+            </details>
+            <details class="faq-item">
+                <summary>¿Puedo usar los bots para estudiar en otra comunidad autónoma?</summary>
+                <div class="faq-answer">Las preguntas están orientadas al temario de Andalucía, pero muchos contenidos son comunes a nivel nacional. Si estás en otra comunidad, los bots pueden servirte como herramienta complementaria de estudio, aunque puede haber diferencias en algunos temas específicos.</div>
+            </details>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta">
+        <h2>Empieza a preparar tu examen hoy</h2>
+        <p>Cientos de preguntas te esperan. Sin excusas, sin costes, directamente desde tu móvil.</p>
+        <div class="hero-buttons">
+            <a href="https://t.me/PruebasLibresESO_bot" class="btn" target="_blank" rel="noopener">
+                🎓 Pruebas Libres ESO
+            </a>
+            <a href="https://t.me/AccesoGradoMedioAndalucia_bot" class="btn" target="_blank" rel="noopener">
+                🔧 Acceso Grado Medio
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Bots Educativos Andalucía. Herramientas gratuitas para estudiantes.</p>
+    </footer>
+
+</body>
+</html>
